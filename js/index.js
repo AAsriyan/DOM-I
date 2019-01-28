@@ -43,17 +43,41 @@ logo.setAttribute('src', siteContent.nav["img-src"]);
 
 // Navigation anchor links 
 
+// Appending Home anchor link
+let nav = document.querySelector('nav');
+let homeNav = document.createElement('a');
+homeNav.setAttribute('href', '#');
+homeNav.innerHTML = 'Home';
+nav.appendChild(homeNav);
+
+// Appending Wow anchor link
+let wowNav = document.createElement('a');
+wowNav.setAttribute('href', '#');
+wowNav.innerHTML = 'Wow';
+nav.prepend(wowNav);
+
 let navBar = document.querySelectorAll('nav a');
 // Trying to figure out how to do a forEach for the nav anchor tags
 // navBar.forEach(element => {
 //   element.textContent = siteContent.nav[element];
 // })
-navBar[0].textContent = siteContent.nav["nav-item-1"];
-navBar[1].textContent = siteContent.nav["nav-item-2"];
-navBar[2].textContent = siteContent.nav["nav-item-3"];
-navBar[3].textContent = siteContent.nav["nav-item-4"];
-navBar[4].textContent = siteContent.nav["nav-item-5"];
-navBar[5].textContent = siteContent.nav["nav-item-6"];
+navBar[1].textContent = siteContent.nav["nav-item-1"];
+navBar[2].textContent = siteContent.nav["nav-item-2"];
+navBar[3].textContent = siteContent.nav["nav-item-3"];
+navBar[4].textContent = siteContent.nav["nav-item-4"];
+navBar[5].textContent = siteContent.nav["nav-item-5"];
+navBar[6].textContent = siteContent.nav["nav-item-6"];
+
+// Changing navigation anchor color to green
+
+navBar[0].style.color = 'green';
+navBar[1].style.color = 'green';
+navBar[2].style.color = 'green';
+navBar[3].style.color = 'green';
+navBar[4].style.color = 'green';
+navBar[5].style.color = 'green';
+navBar[6].style.color = 'green';
+navBar[7].style.color = 'green';
 
 // CTA content adding text content insertion for h1, button, and image source.
 
