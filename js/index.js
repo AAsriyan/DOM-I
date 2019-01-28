@@ -43,28 +43,22 @@ logo.setAttribute('src', siteContent.nav["img-src"]);
 
 // Navigation anchor links 
 
-let nav1 = document.getElementById('nav1');
-nav1.textContent = siteContent.nav["nav-item-1"];
-
-let nav2 = document.getElementById('nav2');
-nav2.textContent = siteContent.nav["nav-item-2"];
-
-let nav3 = document.getElementById('nav3');
-nav3.textContent = siteContent.nav["nav-item-3"];
-
-let nav4 = document.getElementById('nav4');
-nav4.textContent = siteContent.nav["nav-item-4"];
-
-let nav5 = document.getElementById('nav5');
-nav5.textContent = siteContent.nav["nav-item-5"];
-
-let nav6 = document.getElementById('nav6');
-nav6.textContent = siteContent.nav["nav-item-6"];
+let navBar = document.querySelectorAll('nav a');
+// Trying to figure out how to do a forEach for the nav anchor tags
+// navBar.forEach(element => {
+//   element.textContent = siteContent.nav[element];
+// })
+navBar[0].textContent = siteContent.nav["nav-item-1"];
+navBar[1].textContent = siteContent.nav["nav-item-2"];
+navBar[2].textContent = siteContent.nav["nav-item-3"];
+navBar[3].textContent = siteContent.nav["nav-item-4"];
+navBar[4].textContent = siteContent.nav["nav-item-5"];
+navBar[5].textContent = siteContent.nav["nav-item-6"];
 
 // CTA content adding text content insertion for h1, button, and image source.
 
 let ctaHeader = document.querySelector('.cta-text h1');
-ctaHeader.textContent = siteContent.cta["h1"];
+ctaHeader.innerHTML = siteContent.cta["h1"];
 
 let ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent.cta["button"];
@@ -72,54 +66,30 @@ ctaButton.textContent = siteContent.cta["button"];
 let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent.cta["img-src"]);
 
-// Top Content text insertion
-// Features content
+// Header Content text insertion
 
-let topFeatureContent = document.querySelector('#features-content-input h4');
-topFeatureContent.textContent = siteContent['main-content']['features-h4'];
+let textHeaderContent = document.querySelectorAll('.text-content h4');
+textHeaderContent[0].textContent = siteContent['main-content']['features-h4'];
+textHeaderContent[1].textContent = siteContent['main-content']['about-h4'];
+textHeaderContent[2].textContent = siteContent['main-content']['services-h4'];
+textHeaderContent[3].textContent = siteContent['main-content']['product-h4'];
+textHeaderContent[4].textContent = siteContent['main-content']['vision-h4'];
 
-let topFeatureTextContent = document.querySelector('#features-content-input p');
-topFeatureTextContent.textContent = siteContent['main-content']['features-content'];
+// Text Content insertion
 
-// About content
+let textParagraphContent = document.querySelectorAll('.text-content p');
+textParagraphContent[0].textContent = siteContent['main-content']['features-content'];
+textParagraphContent[1].textContent = siteContent['main-content']['about-content'];
+textParagraphContent[2].textContent = siteContent['main-content']['services-content'];
+textParagraphContent[3].textContent = siteContent['main-content']['product-content'];
+textParagraphContent[4].textContent = siteContent['main-content']['vision-content'];
 
-let topAboutContent = document.querySelector('#about-content-input h4');
-topAboutContent.textContent = siteContent['main-content']['about-h4'];
-
-let topAboutTextContent = document.querySelector('#about-content-input p');
-topAboutTextContent.textContent = siteContent['main-content']['about-content'];
-
-// Middle image source insertion
+// // Middle image source insertion
 
 let middleImage = document.querySelector("#middle-img");
 middleImage.setAttribute('src', siteContent['main-content']["middle-img-src"]);
 
-// Bottom content text insertion
-// Services content
-
-let servicesContent = document.querySelector('#services-content-input h4');
-servicesContent.textContent = siteContent['main-content']['services-h4'];
-
-let servicesTextContent = document.querySelector('#services-content-input p');
-servicesTextContent.textContent = siteContent['main-content']['services-content'];
-
-// Product content
-
-let productContent = document.querySelector('#product-content-input h4');
-productContent.textContent = siteContent['main-content']['product-h4'];
-
-let productTextContent = document.querySelector('#product-content-input p');
-productTextContent.textContent = siteContent['main-content']['product-content'];
-
-// Vision content
-
-let visionContent = document.querySelector('#vision-content-input h4');
-visionContent.textContent = siteContent['main-content']['vision-h4'];
-
-let visionTextContent = document.querySelector('#vision-content-input p');
-visionTextContent.textContent = siteContent['main-content']['vision-content'];
-
-// Contact content text insertion
+// // Contact content text insertion
 
 let contactHeader = document.querySelector('.contact h4');
 contactHeader.textContent = siteContent.contact["contact-h4"];
