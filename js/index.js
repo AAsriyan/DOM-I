@@ -82,7 +82,7 @@ navBar[7].style.color = 'green';
 // CTA content adding text content insertion for h1, button, and image source.
 
 let ctaHeader = document.querySelector('.cta-text h1');
-ctaHeader.innerHTML = siteContent.cta["h1"];
+ctaHeader.innerHTML = 'DOM<br>IS<br>AWESOME';
 
 let ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent.cta["button"];
